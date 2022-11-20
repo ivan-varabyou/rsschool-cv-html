@@ -42,7 +42,7 @@
                     </div>
                     <div class="photo__body">
                         <h1 class="selection__title contacts__name">Ivan Varabyou</h1>
-                        <p class="contacts__job">Front-end Developer, SEO</p>
+                        <p class="contacts__job">Front-end Developer</p>
                     </div>
                 </section>
                 <section class="contacts section" id="contacts">
@@ -73,15 +73,15 @@
                     <h3 class="selection_title"><i class='bx bx-medal'></i>Skills:</h3>
                     <div class="skills__body">
                         <ul>
-                            <li class="skills__row"><i class='bx bxl-html5' ></i>HTML</li>
-                            <li class="skills__row"><i class='bx bxl-css3' ></i>CSS (Bootstrap)</li>
-                            <li class="skills__row"><i class='bx bxl-google' ></i>SEO</li>
+                            <li class="skills__row"><i class='bx bxl-html5' ></i>HTML (VSCODE)</li>
+                            <li class="skills__row"><i class='bx bxl-css3' ></i>CSS (SCSS, Bootstrap, BEM)</li>
+                            <li class="skills__row"><i class='bx bxl-google' ></i>SEO (Yandex, Google)</li>
                             <li class="skills__row"><i class='bx bxl-meta' ></i>Yandex.Direct, Facebook Ads</li>
-                            <li class="skills__row"><i class='bx bxl-github' ></i>Git/GitHub</li>
+                            <li class="skills__row"><i class='bx bxl-github' ></i>Git/GitHub, NPM, WEBPACK</li>
                             <li class="skills__row" class="basic"><i class='bx bxl-php' ></i>PHP (Opencart, Wordpress)</li>
                             <li class="skills__row"><i class='bx bx-data'></i>MySql</li>
                             <li class="skills__row" class="in-progress"><i class='bx bxl-javascript'></i>JavaScript</li>
-                            <li class="skills__row" class="basic"><i class='bx bxl-adobe' ></i>Photoshop, Illustrator, Premier, After Effects</li>
+                            <li class="skills__row" class="basic"><i class='bx bxl-adobe' ></i>Photoshop, Figma, Premier Pro</li>
                           </ul>
                     </div>
                 </section>
@@ -89,9 +89,25 @@
                         <h3 class="section__title"><i class='bx bx-code' ></i>Code example:</h3>
                         <div class="code__body">
                             <code class="js">
-                                function multiply(a, b) {
-                                    return a * b;
-                                  }
+                                // { user: { name: { first: 'John', last: 'Snow' } } } 'user.name.first'
+
+                                function find(object, path) {
+                                      const obj = {...object}
+                                      let item, rez, i = 0 , items = path.split('.');
+                                      function get(obj) {
+                                        if(typeof obj != "object" && items.length == i) {
+                                          return rez = obj;
+                                        } else {
+                                            item = items[i]
+                                            if(obj.hasOwnProperty(`${item}`)) {
+                                              i++; get(obj[item]);
+                                            }
+                                        }
+                                      }
+                                      get(obj)
+                                      return rez
+                                }
+
                             </code>
                         </div>
                 </section>
@@ -136,7 +152,7 @@
                             <div class="education__row">
                                 <div class="education__row-left"></div>
                                 <div class="education__row-right">
-                                    <p><span class="date separator">2014 </span> Brest State Technical University <strong>Marketing Specialist</strong></p>
+                                    <p><span class="date separator">2014 </span> Brest State Technical University <strong>Marketing Specialist, Manager</strong></p>
                                 </div>
                             </div>
                             <div class="education__row">
