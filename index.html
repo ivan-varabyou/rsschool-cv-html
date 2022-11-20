@@ -89,24 +89,24 @@
                         <h3 class="section__title"><i class='bx bx-code' ></i>Code example:</h3>
                         <div class="code__body">
                             <code class="js">
-                                // { user: { name: { first: 'John', last: 'Snow' } } } 'user.name.first'
-
-                                function find(object, path) {
-                                      const obj = {...object}
-                                      let item, rez, i = 0 , items = path.split('.');
-                                      function get(obj) {
-                                        if(typeof obj != "object" && items.length == i) {
-                                          return rez = obj;
-                                        } else {
-                                            item = items[i]
-                                            if(obj.hasOwnProperty(`${item}`)) {
-                                              i++; get(obj[item]);
-                                            }
-                                        }
-                                      }
-                                      get(obj)
-                                      return rez
-                                }
+                                // { user: { name: { first: 'John', last: 'Snow' } } } 'user.name.first'</br>
+                            </br>
+                                function find(object, path) {</br>
+                                &nbsp;const obj = {...object}</br>
+                                &nbsp;let item, rez, i = 0 , items = path.split('.');</br>
+                                &nbsp;function get(obj) {</br>
+                                &nbsp;&nbsp;if(typeof obj != "object" && items.length == i) {</br>
+                                &nbsp;&nbsp;&nbsp;return rez = obj;</br>
+                                &nbsp;&nbsp;} else {</br>
+                                &nbsp;&nbsp;&nbsp;item = items[i];</br>
+                                &nbsp;&nbsp;if(obj.hasOwnProperty(`${item}`)) {</br>
+                                &nbsp;&nbsp;&nbsp;i++; get(obj[item]);</br>
+                                &nbsp;&nbsp;}</br>
+                                &nbsp;&nbsp;}</br>
+                                &nbsp;}</br>
+                                      get(obj)</br>
+                                      return rez</br>
+                                }</br>
 
                             </code>
                         </div>
